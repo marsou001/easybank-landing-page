@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./pages/*.{html,js,jsx,ts,tsx}",
     "./shared/ui/*.{html,js,jsx,ts,tsx}",
-    "./components/*.{html,js,jsx,ts,tsx}",
+    "./components/*/*.{html,js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
@@ -17,6 +17,11 @@ module.exports = {
         'light-grayish-blue': 'hsl(220, 16%, 96%)',
         'very-light-gray': 'hsl(0, 0%, 98%)',
         'white': 'hsl(0, 0%, 100%)',
+      },
+      screens: {
+        'xs': '500px',
+        'lg': '992px',
+        'xl': '1200px',
       }
     },
   },
