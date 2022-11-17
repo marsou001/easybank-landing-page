@@ -3,6 +3,6 @@ import Title from "../shared/ui/Title";
 
 export default function Home() {
   return (
-    <Title>Let us test something</Title>
+    <RequestInviteButton />
   )
 }
