@@ -10,8 +10,8 @@ function Hero() {
       </div>
 
       <div className="text-center md:text-left px-4 md:max-w-[45%] lg:pl-28">
-        <h1 className="text-dark-blue text-3xl mt-0 mb-3 lg:text-5xl lg:leading-[3.5rem]">Next generation digital banking</h1>
-        <p className="text-grayish-blue text-xs leading-5 lg:text-base">Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
+        <h1 className="text-dark-blue text-3xl mt-0 mb-3 xl:text-5xl xl:leading-[3.5rem]">Next generation digital banking</h1>
+        <p className="text-grayish-blue text-xs leading-5 xl:text-base">Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
       </div>
     </section>
   )
