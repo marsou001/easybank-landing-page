@@ -4,7 +4,7 @@ import listItems from "./listItems";
 
 function HeaderBar() {
   return (
-    <header className="flex justify-between items-center p-4 lg:p-6 lg:px-28 lg:py-0">
+    <header className="bg-white absolute flex justify-between items-center w-full p-4 lg:p-6 lg:px-28 lg:py-0 z-10">
       <Logo />
 
       <button className="lg:hidden">
