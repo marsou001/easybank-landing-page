@@ -1,5 +1,6 @@
 import Logo from "../../shared/ui/Logo";
 import RequestInviteButton from "../../shared/ui/RequestInviteButton";
+import listItems from "./listItems";
 
 function HeaderBar() {
   return (
@@ -14,21 +15,11 @@ function HeaderBar() {
 
       <nav className="hidden lg:block">
         <ul className="h-16">
-          <li className="bg-gradient-to-r from-lime-green to-bright-cyan text-grayish-blue hover:text-dark-blue text-sm inline-block h-full">
-            <a href="#" className="bg-white flex justify-center items-center px-4 h-full hover:h-[95%]">Home</a>
-          </li>
-          <li className="bg-gradient-to-r from-lime-green to-bright-cyan text-grayish-blue hover:text-dark-blue text-sm inline-block h-full">
-            <a href="#" className="bg-white flex justify-center items-center px-4 h-full hover:h-[95%]">About</a>
-          </li>
-          <li className="bg-gradient-to-r from-lime-green to-bright-cyan text-grayish-blue hover:text-dark-blue text-sm inline-block h-full">
-            <a href="#" className="bg-white flex justify-center items-center px-4 h-full hover:h-[95%]">Contact</a>
-          </li>
-          <li className="bg-gradient-to-r from-lime-green to-bright-cyan text-grayish-blue hover:text-dark-blue text-sm inline-block h-full">
-            <a href="#" className="bg-white flex justify-center items-center px-4 h-full hover:h-[95%]">Blog</a>
-          </li>
-          <li className="bg-gradient-to-r from-lime-green to-bright-cyan text-grayish-blue hover:text-dark-blue text-sm inline-block h-full">
-            <a href="#" className="bg-white flex justify-center items-center px-4 h-full hover:h-[95%]">Careers</a>
-          </li>
+          {listItems.map((listItem) => (
+            <li key={listItem} className="bg-gradient-to-r from-lime-green to-bright-cyan text-grayish-blue hover:text-dark-blue text-sm inline-block h-full">
+              <a href="#" className="bg-white flex justify-center items-center px-4 h-full hover:h-[95%]">{ listItem }</a>
+            </li>
+          ))}
         </ul> 
       </nav>
 
