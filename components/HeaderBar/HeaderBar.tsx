@@ -7,7 +7,7 @@ function HeaderBar() {
     <header className="bg-white absolute flex justify-between items-center w-full p-4 md:py-0 lg:px-28 lg:py-0 z-10">
       <Logo />
 
-      <button className="md:hidden">
+      <button className="md:hidden" data-testid="menu">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>

@@ -1,5 +1,5 @@
-import { beforeEach, describe, it } from "node:test";
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import HeaderBar from "./HeaderBar";
 import links from "./listItems";
 
@@ -19,29 +19,32 @@ describe("HeaderBar", () => {
   });
 
   it("renders menu button", () => {
-    const menuButton = screen.getByRole("button");
+    const menuButton = screen.getByTestId("menu");
     expect(menuButton).toBeInTheDocument();
   });
 
-  test("Navigation links", () => {
-    it("renders navigation", () => {
-      const nav = screen.getByRole("navigation");
-      expect(nav).toBeInTheDocument();
-    });
+  it("renders navigation", () => {
+    const nav = screen.getByRole("navigation");
+    expect(nav).toBeInTheDocument();
+  });
 
-    it("renders list", () => {
-      const list = screen.getByRole("list");
-      expect(list).toBeInTheDocument();
-    });
+  it("renders list", () => {
+    const list = screen.getByRole("list");
+    expect(list).toBeInTheDocument();
+  });
 
-    it("renders list items", () => {
-      const listItems = screen.getAllByRole("listitem");
-      expect(listItems).toBe(5);
+  it("renders list items", () => {
+    const listItems = screen.getAllByRole("listitem");
+    expect(listItems.length).toBe(5);
 
-      listItems.forEach((listItem, index) => {
-        expect(listItem).toBeInTheDocument();
-        expect(listItem).toHaveTextContent(links[index]);
-      });
+    listItems.forEach((listItem, index) => {
+      expect(listItem).toBeInTheDocument();
+      expect(listItem).toHaveTextContent(links[index]);
     });
-  }); 
+  });
+
+  it("renders call to action button", () => {
+    const callToActionButton = screen.getByText("Request Invite");
+    expect(callToActionButton).toBeInTheDocument();
+  })
 })
