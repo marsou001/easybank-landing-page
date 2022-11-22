@@ -126,19 +126,21 @@ function HeaderBar() {
       </header>
 
       {showDialog && <div className="bg-gradient-to-b from-gray-800 to-transparent absolute flex justify-center items-center w-full top-0 bottom-0 z-10" role="dialog">
-        <ul className="text-dark-blue bg-white text-center w-10/12 py-4">
-          {listItems.map((listItem) => (
-            <li key={listItem} className="py-2">
-              {listItem === "Home" ? (
-                <a href="#" ref={firstListItemRef} onKeyDown={handleKeyDownFirstListItem}>{ listItem }</a>
-              ) : listItem === "Careers" ? (
-                <a href="#" ref={lastListItemRef} onKeyDown={handleKeyDownLastListItem}>{ listItem }</a>
-              ) : (
-                <a href="#" onKeyDown={handleKeyDownListItem}>{ listItem }</a>
-              )}
-            </li>
-          ))}
-        </ul>
+        <nav className="text-dark-blue bg-white text-center w-10/12 py-4">
+          <ul>
+            {listItems.map((listItem) => (
+              <li key={listItem} className="py-2">
+                {listItem === "Home" ? (
+                  <a href="#" ref={firstListItemRef} onKeyDown={handleKeyDownFirstListItem}>{ listItem }</a>
+                ) : listItem === "Careers" ? (
+                  <a href="#" ref={lastListItemRef} onKeyDown={handleKeyDownLastListItem}>{ listItem }</a>
+                ) : (
+                  <a href="#" onKeyDown={handleKeyDownListItem}>{ listItem }</a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>}
     </>
      
