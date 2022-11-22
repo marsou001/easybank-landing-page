@@ -6,6 +6,7 @@ import listItems from "./listItems";
 function HeaderBar() {
   const [showDialog, setShowDialog] = useState(false);
 
+  const dialogControlRef = useRef<HTMLButtonElement>(null);
   const firstListItemRef = useRef<HTMLAnchorElement>(null);
   const lastListItemRef = useRef<HTMLAnchorElement>(null);
 
@@ -21,6 +22,11 @@ function HeaderBar() {
 
     document.body.style.overflowY = "initial";
     document.body.style.height = "initial";
+  }
+
+  const focusOnDialogControl = () => {
+    const dialogControl = dialogControlRef.current!;
+    dialogControl.focus();
   }
 
   const focusOnFirstListItem = () => {
@@ -61,7 +67,8 @@ function HeaderBar() {
   const handleKeyDownListItem = (e: KeyboardEvent) => {
     if (e.code === "Escape") {
       closeDialog();
-      focusOnFirstListItem();
+      e.preventDefault();
+      focusOnDialogControl();
     }
   }
 
@@ -94,6 +101,7 @@ function HeaderBar() {
         <Logo />
 
         <button
+          ref={dialogControlRef}
           className="md:hidden" 
           data-testid="menu"
           onClick={showDialog ? handleClickHideDialog: handleClickShowDialog}
