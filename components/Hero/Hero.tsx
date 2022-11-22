@@ -4,7 +4,7 @@ import RequestInviteButton from '../../shared/ui/RequestInviteButton';
 
 function Hero() {
   return (
-    <section className="flex flex-col md:flex-row-reverse md:justify-between md:items-center">
+    <section className="bg-very-light-gray flex flex-col pb-16 md:flex-row-reverse md:justify-between md:items-center md:pb-0">
       <div className="md:max-w-[55%] md:scale-125 md:translate-x-20">
         <img src={illustrationMobile} alt="illustration" className="md:hidden w-full h-full" />
         <img src={illustrationDesktop} alt="illustration" className="hidden md:inline-block" />
