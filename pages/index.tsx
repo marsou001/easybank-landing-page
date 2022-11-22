@@ -1,3 +1,4 @@
+import Features from "../components/Features/Features";
 import HeaderBar from "../components/HeaderBar/HeaderBar";
 import Hero from "../components/Hero/Hero";
 
@@ -7,6 +8,7 @@ export default function Home() {
       <HeaderBar />
       <main>
         <Hero />
+        <Features />
       </main>
     </>
   )
