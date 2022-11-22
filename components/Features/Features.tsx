@@ -9,13 +9,13 @@ function Features() {
       </main>
 
       <div className="features text-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:text-left">
-        {features.map((feature) => (
-          <div className="feature">
+        {features.map(({ icon, title, paragraph }) => (
+          <div key={title} className="feature" data-testid="feature">
             <div className="feature-image mb-5">
-              <img src={feature.icon} className="mx-auto lg:mx-0" alt="" />
+              <img src={icon} className="mx-auto lg:mx-0" alt="" />
             </div>
-            <h2 className="feature-title text-dark-blue mb-4">{ feature.title }</h2>
-            <p className="feature-paragraph text-grayish-blue text-xs leading-5">{ feature.paragraph }</p>
+            <h2 className="feature-title text-dark-blue mb-4">{ title }</h2>
+            <p className="feature-paragraph text-grayish-blue text-xs leading-5">{ paragraph }</p>
           </div>
         ))}
       </div>
