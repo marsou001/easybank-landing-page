@@ -7,7 +7,7 @@ function LatestArticles() {
 
       <div className="articles grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
         {articles.map((article) => (
-          <div key={article.title} className="article bg-white overflow-hidden rounded-md cursor-pointer">
+          <div key={article.title} className="article bg-white overflow-hidden rounded-md cursor-pointer" data-testid="article">
             <div className="article-image w-full h-1/2">
               <img src={article.image} className="w-full h-full" alt="" />
             </div>
