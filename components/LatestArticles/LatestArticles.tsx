@@ -14,7 +14,9 @@ function LatestArticles() {
 
             <div className="article-info p-4 pb-8">
               <span className="article-info__author text-grayish-blue text-[.65rem] block">By { article.author }</span>
-              <h2 className="article-info__title text-dark-blue text-[1.1rem] hover:text-lime-green leading-5 my-2">{ article.title }</h2>
+              <h2 className="article-info__title text-dark-blue text-[1.1rem] hover:text-lime-green leading-5 my-2">
+                <a href="#">{ article.title }</a>
+              </h2>
               <p className="article-info__excerpt text-grayish-blue text-sm">{ article.excerpt }</p>
             </div>
           </div>
