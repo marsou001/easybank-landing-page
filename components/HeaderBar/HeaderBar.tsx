@@ -98,7 +98,9 @@ function HeaderBar() {
         aria-labelledby="nav"
         aria-describedby="nav"
       >
-        <Logo />
+        <div data-testid="logo">
+          <Logo />
+        </div>
 
         <button
           ref={dialogControlRef}
