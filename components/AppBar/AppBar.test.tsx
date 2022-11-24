@@ -6,17 +6,17 @@ import {
   screen,
 } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import HeaderBar from "./HeaderBar";
+import AppBar from "./AppBar";
 import links from "./listItems";
 
-describe("HeaderBar", () => {
+describe("AppBar", () => {
   beforeEach(() => {
-    render(<HeaderBar />);
+    render(<AppBar />);
   });
 
   it("renders", () => {
-    const headerBar = screen.getByRole("banner");
-    expect(headerBar).toBeInTheDocument();
+    const appBar = screen.getByRole("banner");
+    expect(appBar).toBeInTheDocument();
   });
 
   it("renders logo", () => {
@@ -57,7 +57,7 @@ describe("HeaderBar", () => {
 
 describe("Dialog", () => {
   beforeEach(() => {
-    render(<HeaderBar />);
+    render(<AppBar />);
 
     const dialogModalControl = screen.getByTestId("menu");
     fireEvent.click(dialogModalControl);
@@ -109,7 +109,7 @@ describe("Dialog", () => {
 
 describe("Accessibility", () => {
   beforeEach(() => {
-    render(<HeaderBar />);
+    render(<AppBar />);
   });
 
   it("renders and unrenders on pressing Enter key on menu", () => {
