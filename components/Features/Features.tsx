@@ -1,3 +1,4 @@
+import Feature from "./Feature/Feature";
 import { features, paragraph, title } from "./text";
 
 function Features() {
@@ -9,14 +10,8 @@ function Features() {
       </main>
 
       <div className="features text-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:text-left">
-        {features.map(({ icon, title, paragraph }) => (
-          <div key={title} className="feature" data-testid="feature">
-            <div className="feature-image mb-5">
-              <img src={icon} className="mx-auto lg:mx-0" alt="" />
-            </div>
-            <h2 className="feature-title text-dark-blue mb-4">{ title }</h2>
-            <p className="feature-paragraph text-grayish-blue text-xs leading-5">{ paragraph }</p>
-          </div>
+        {features.map((feature) => (
+          <Feature key={feature.title} {...feature} />
         ))}
       </div>
     </section>
