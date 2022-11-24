@@ -9,7 +9,7 @@ describe("Hero", () => {
 
   it("renders illustrations", () => {
     const illustrations = screen.getAllByRole("img");
-    expect(illustrations.length).toBe(2);
+    expect(illustrations.length).toBe(3);
 
     illustrations.forEach((illustration) => expect(illustration).toBeInTheDocument());
   });
